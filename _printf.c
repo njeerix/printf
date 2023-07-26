@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 int i, printed = 0, printed_chars = 0;
 int flags, width, precision, size, buff_ind = 0;
 va_list list;
-char buffer[BUFFER_SIZE];
+char buffer[BUFF_SIZE];
 if(format == NULL)
 return (-1);
 va_start(list, format);
@@ -38,7 +38,7 @@ return (-1);
 printed_chars += printed;
 }
 }
-printed_buffer(buffer, &buff_ind);
+print_buffer(buffer, &buff_ind);
 va_end(list);
 return (printed_chars);
 }
